@@ -77,4 +77,12 @@ export default function Products() {
     </main>
   );
 }
+// app/api/lead/route.ts (Email stub)
+import { NextResponse } from 'next/server';
+// Integrate Resend/SendGrid here
+export async function POST(req: Request) {
+  const data = await req.formData();
+  // TODO: send email and save to DB (e.g., Supabase/Airtable)
+  return NextResponse.json({ ok: true });
+}
 
