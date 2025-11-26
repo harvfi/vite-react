@@ -6,3 +6,16 @@ cd harvestfi
 npx shadcn-ui@latest init
 npx shadcn-ui@latest add button card input textarea form
 
+// app/layout.tsx
+import './globals.css';
+export const metadata = {
+  title: 'HarvestFi',
+  description: 'Escrow, microloans, and insurance for local farmers and markets.',
+};
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className="min-h-screen bg-white text-slate-800">{children}</body>
+    </html>
+  );
+}
