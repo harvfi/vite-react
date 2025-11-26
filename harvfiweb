@@ -1,0 +1,8 @@
+# Create project
+npx create-next-app@latest harvestfi --typescript --eslint --tailwind
+
+# Add UI kit (optional)
+cd harvestfi
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add button card input textarea form
+
