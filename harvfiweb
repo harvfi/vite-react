@@ -50,3 +50,31 @@ export default function Home() {
     </main>
   );
 }
+
+// app/products/page.tsx
+export default function Products() {
+  const products = [
+    { name: 'Escrow', details: ['Delivery verification', 'Quality check', 'Dispute resolution'] },
+    { name: 'Microloans', details: ['Inputs financing', 'Transparent fees', 'Flexible repayment'] },
+    { name: 'Insurance', details: ['Parametric weather triggers', 'Yield coverage', 'Fast payouts'] },
+  ];
+  return (
+    <main className="mx-auto max-w-4xl px-6 py-12">
+      <h1 className="text-3xl font-semibold">Products</h1>
+      <p className="mt-3 text-slate-600">
+        Built for seasonal cycles, local markets, and simple, fair terms.
+      </p>
+      <div className="mt-8 space-y-6">
+        {products.map((p) => (
+          <div key={p.name} className="rounded border p-6">
+            <h2 className="text-2xl font-medium">{p.name}</h2>
+            <ul className="mt-3 list-disc pl-6">
+              {p.details.map((d) => (<li key={d}>{d}</li>))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
+}
+
